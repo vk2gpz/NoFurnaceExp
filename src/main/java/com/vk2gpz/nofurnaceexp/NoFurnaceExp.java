@@ -6,8 +6,6 @@ import org.bukkit.event.inventory.FurnaceExtractEvent;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.*;
 
-import java.util.*;
-
 public class NoFurnaceExp extends JavaPlugin implements CommandExecutor, Listener {
 	private boolean noExp;
 	
