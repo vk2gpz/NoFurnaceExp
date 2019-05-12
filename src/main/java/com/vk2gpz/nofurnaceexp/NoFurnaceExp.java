@@ -1,13 +1,8 @@
 package com.vk2gpz.nofurnaceexp;
 
-import org.bukkit.ChatColor;
 import org.bukkit.command.*;
-import org.bukkit.configuration.ConfigurationSection;
-import org.bukkit.entity.*;
 import org.bukkit.event.*;
-import org.bukkit.event.entity.*;
 import org.bukkit.event.inventory.FurnaceExtractEvent;
-import org.bukkit.event.player.*;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.*;
 
@@ -15,7 +10,6 @@ import java.util.*;
 
 public class NoFurnaceExp extends JavaPlugin implements CommandExecutor, Listener {
 	private boolean noExp;
-	private static List<Player> GODS = new ArrayList<Player>();
 	
 	@Override
 	public void onEnable() {
