@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'maven'
+}
+
+group 'com.vk2gpz.nofurnaceexp'
+version '1.0.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven { url "https://hub.spigotmc.org/nexus/content/groups/public/" } // spigot repo
+}
+
+dependencies {
+    compile group: 'org.spigotmc', name: 'spigot-api', version: '1.14-R0.1-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: 'latest.release'
+}
+
+// substitute the version number in plugin.yml
+processResources {
+    with copySpec {
+        from sourceSets.main.resources.srcDirs
+        filter { String line -> line.replace('${project.version}', project.version)
+        }
+    }
+}
+
