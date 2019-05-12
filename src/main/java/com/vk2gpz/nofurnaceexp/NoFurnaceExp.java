@@ -45,7 +45,7 @@ public class NoFurnaceExp extends JavaPlugin implements CommandExecutor, Listene
 	}
 	
 	
-	@EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = false)
+	@EventHandler(priority = EventPriority.MONITOR, ignoreCancelled = true)
 	public void onFurnaceExtract(FurnaceExtractEvent e) {
 		if (noExp) {
 			e.setExpToDrop(0);
